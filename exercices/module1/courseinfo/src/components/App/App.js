@@ -1,5 +1,5 @@
 import Total from "../Total"
-import Header from "../Header"
+import Header from "../Header/Header"
 import Content from "../Content"
 import './App.css'
 
