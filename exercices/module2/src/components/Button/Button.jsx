@@ -1,5 +1,5 @@
-const Button = ({ onClick, text }) => (
-    <button onClick={onClick}>
+const Button = ({ handleClick, text, delta }) => (
+    <button onClick={handleClick} data-delta={delta}>
       {text}
     </button>
   )
