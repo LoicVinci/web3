@@ -1,6 +1,6 @@
 import Total from "../Total"
-import Header from "../Header/Header"
 import Content from "../Content"
+import Header from "../Header/Header"
 import './App.css'
 
 const App = () => {
