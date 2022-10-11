@@ -31,19 +31,35 @@ const Button = () => {
         setClicks(newClicks)
     }
 
-    return (
-        <div>
-            <h1>give feed back</h1>
-            <button onClick={handleGoodClick}>good</button>
-            <button onClick={handleNeutralClick}>neutral</button>
-            <button onClick={handleBadClick}>bad</button>
-            <h1>statistics</h1>
-            good {clicks.good} <br ></br>
-            neutral {clicks.neutral} <br ></br>
-            bad {clicks.bad} <br ></br>
-            <Statistics good={clicks.good} neutral={clicks.neutral} bad={clicks.bad} />
-        </div>
-    )
+    const all = clicks.good + clicks.neutral + clicks.bad;
+
+    if(all == 0) {
+        return (
+            <div>
+                <h1>give feed back</h1>
+                <button onClick={handleGoodClick}>good</button>
+                <button onClick={handleNeutralClick}>neutral</button>
+                <button onClick={handleBadClick}>bad</button>
+                <h1>statistics</h1>
+                No feedback given
+            </div>
+        )
+    }
+    else {
+        return (
+            <div>
+                <h1>give feed back</h1>
+                <button onClick={handleGoodClick}>good</button>
+                <button onClick={handleNeutralClick}>neutral</button>
+                <button onClick={handleBadClick}>bad</button>
+                <h1>statistics</h1>
+                good {clicks.good} <br ></br>
+                neutral {clicks.neutral} <br ></br>
+                bad {clicks.bad} <br ></br>
+                <Statistics good={clicks.good} neutral={clicks.neutral} bad={clicks.bad} />
+            </div>
+        )
+    }
 }
 
 export default Button
