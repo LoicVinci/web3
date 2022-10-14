@@ -4,7 +4,7 @@ import StatisticLine from "../StatisticLine/StatisticLine"
 import Button from "../Button/Button"
 
 const App = () => {
-    console.log("Try");
+    
     const [clicks, setClicks] = useState({
         good: 0, neutral: 0, bad: 0
     })
