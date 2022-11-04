@@ -1,9 +1,14 @@
+import { useContext } from "react"
+import { Context as VotesContext } from "../../contexts/VotesContext"
+
 const ButtonBad = () => {
-  
+
+    const { bad, incrementBad } = useContext(VotesContext)
+
     return (
       <div>
-        Bad : 3
-        <button>increase bad</button>
+        Bad : {bad}
+        <button onClick={incrementBad}>increase bad</button>
       </div>
     )
   }
