@@ -5,6 +5,7 @@ import {
 import Home from "./Home"
 import Users from "./Users"
 import Notes from "./Notes"
+import './App.css'
 
 const App = () => {
 
